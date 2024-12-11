@@ -2,6 +2,8 @@
 #ifndef CONST_N_GLOBAL_H
 #define CONST_N_GLOBAL_H
 #include <Arduino.h>
+#include <HardwareSerial.h>
+
 /*
  *==========Arduino Nano pinout======
  *                      _______
@@ -40,6 +42,8 @@ const int LED_NUM = 16;
 
 #define DEBOUNCE_DELAY 10
 
+#define PRINT_LOG true
+
 int b1_state = 0;
 int b2_state = 0;
 int b3_state = 0;
@@ -74,6 +78,7 @@ const unsigned long IDLE_DELAY = 60000;          // 1 minute (in milliseconds) i
 const unsigned long RANDOM_ON_DURATION = 45000;  // 45 seconds for random LED group
 bool IDLE_MODE = false;                          // Flag for idle mode
 int RANDOM_GROUP = -1;                           // To track the random group turned on
+int LAST_GROUP = -1;
 
 int sequence[] = { 1, 3, 5, 2, 4 };  // Predefined sequence of groups
 int sequenceIndex = 0;               // Index to track the current group in sequence
