@@ -1,2 +1,2 @@
 # photochromic_aquarium
-code for UV LED photochromic aquarium exhibit, Bloomfield Science Museum
+Code for UV LED photochromic aquarium exhibit, Bloomfield Science Museum. Dec 2024.
