@@ -80,7 +80,4 @@ bool IDLE_MODE = false;                          // Flag for idle mode
 int RANDOM_GROUP = -1;                           // To track the random group turned on
 int LAST_GROUP = -1;
 
-int sequence[] = { 1, 3, 5, 2, 4 };  // Predefined sequence of groups
-int sequenceIndex = 0;               // Index to track the current group in sequence
-
 #endif /* CONSTANTS_H */

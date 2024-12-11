@@ -127,8 +127,6 @@ void loop() {
       Serial.println("Entered idle mode.");
     }
     IDLE_MODE = true;
-    // Select the next group in the predefined sequence
-    // RANDOM_GROUP = random(1, NUM_GROUPS + 1);
     do {
       RANDOM_GROUP = random(1, NUM_GROUPS + 1);
     } while (RANDOM_GROUP == LAST_GROUP);
@@ -142,7 +140,7 @@ void loop() {
     LAST_BUTTON_PRESS_TIME = current_time;  // Reset to track random on time
   }
 
-  // If in idle mode, check if 20 seconds have passed to turn off random LED
+  // If in idle mode, check if time have passed to turn off random LED
   if (IDLE_MODE) {
     if (current_time - LAST_BUTTON_PRESS_TIME >= RANDOM_ON_DURATION) {
       off_led(LED_NUM, RANDOM_GROUP);         // Turn off the random group
@@ -158,8 +156,6 @@ void loop() {
         Serial.print(RANDOM_GROUP);
         Serial.print(" in idle.\n");
       }
-      // RANDOM_GROUP = sequence[sequenceIndex];
-      // sequenceIndex = (sequenceIndex + 1) % (sizeof(sequence) / sizeof(sequence[0]));
     } else {
       if ((b1_state == LOW && last_b1_state == HIGH) || (b2_state == LOW && last_b2_state == HIGH) || (b3_state == LOW && last_b3_state == HIGH) || (b4_state == LOW && last_b4_state == HIGH) || (b5_state == LOW && last_b5_state == HIGH)) {
         off_led(LED_NUM, RANDOM_GROUP);  // Turn off the random group
