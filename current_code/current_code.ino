@@ -54,7 +54,7 @@ void on_led(int num, int group) {
 
     digitalWrite(UV_Data_Pin, ledStates[i]);
     toggle_clk();
-    digitalWrite(UV_Data_Pin, !ledStates[i]);
+    digitalWrite(UV_Data_Pin, ledStates[i]);
     toggle_clk();
   }
 
@@ -82,7 +82,7 @@ void off_led(int num, int group) {
 
     digitalWrite(UV_Data_Pin, ledStates[i]);
     toggle_clk();
-    digitalWrite(UV_Data_Pin, !ledStates[i]);
+    digitalWrite(UV_Data_Pin, ledStates[i]);
     toggle_clk();
   }
   digitalWrite(UV_St_Pin, HIGH);

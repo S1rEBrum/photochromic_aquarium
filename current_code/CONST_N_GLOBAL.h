@@ -16,12 +16,12 @@
  *       To Strobe, D4-|       |-A5
  *          To Clk, D5-|       |-A4
  *                  D6-|       |-A3
- *                  D7-|       |-A2
- *                  D8-|       |-A1
- *                  D9-|       |-A0
- *    To Button 1, D10-|       |-Ref
+ *                  D7-|       |-A2(D16) To button 1
+ *                  D8-|       |-A1(D15) To button 5
+ *                  D9-|       |-A0(D14) To button 4
+ *                 D10-|       |-Ref
  *    To Button 2, D11-|       |-3.3V
- *    To Button 3, D12-|       |-D13 To button 4
+ *    To Button 3, D12-|       |-D13 
  *                      --USB--
  */
 
